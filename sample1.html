@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architech - We get your bites in order</title>
+    <meta name="description"
+        content="Architech is a dynamic Kenyan startup specializing in digitizing company files and providing custom app solutions.">
+    <meta name="keywords"
+        content="Architech, digitization, custom app solutions, Kenya startup, business information management">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-bb3asYyT5H7rKgh5tq8T/7dyR4WB7gFV8Bo+IjCZ8mGWCHnQ06W4FVZulI1dA2yE/B5HHBO2n2k9PG89TtwEhQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Architech</h1>
+            </div>
+            <nav>
+                <button class="toggle-menu" aria-expanded="false" aria-controls="menu">Menu</button>
+                <ul class="menu" id="menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#" class="cta">Get a Quote</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="blur">
+            <div class="container">
+                <h2>We get your bytes in order</h2>
+                <p>Digitizing your business, one byte at a time.</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn-primary">Learn More</a>
+                    <a href="#" class="btn-secondary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-us">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Us</h2>
+                    <p>We are a dynamic Kenyan startup revolutionizing business information management by digitizing
+                        company files, seamlessly converting cumbersome paper records into efficient, secure digital
+                        database records. We provide cost-effective solutions that streamline operations and enhance
+                        productivity. </p>
+                    <p>Our dedication to bringing order, efficiency, and modernity to your processes goes beyond
+                        digitization, we excel in creating custom app solutions for mobile, desktop, and web
+                        applications, tailored to meet your unique needs.</p>
+                    <p>Partner with Architech for innovation, reliability, and a
+                        future-ready approach to business management—where your digital journey begins.</p>
+                    <p class="african-solutions">"solutions for Africa by Africans"</p>
+                </div>
+                <div class="about-image">
+                    <img src="team.jpeg" alt="Our Team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-cards">
+                <div class="service-card">
+                    <i class="fas fa-file-alt"></i>
+                    <div class="service-content">
+                        <h3>Digitization</h3>
+                        <p>Transforming paper files into digital records efficiently and securely.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <div class="service-content">
+                        <h3>Custom App Solutions</h3>
+                        <p>Developing tailored mobile, desktop, and web applications for your business needs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-links">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+                <div class="contact-info">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@architech.com</p>
+                    <p>Phone: +1234567890</p>
+                    <p>Address: 123 Street, City, Country</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Font Awesome for Icons -->
+    <script src="https://kit.fontawesome.com/937fb4a4f7.js" crossorigin="anonymous"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggleButton = document.querySelector('.toggle-menu');
+            const menu = document.querySelector('.menu');
+
+            toggleButton.addEventListener('click', function () {
+                const isActive = menu.classList.toggle('active');
+                toggleButton.setAttribute('aria-expanded', isActive);
+                menu.setAttribute('aria-hidden', !isActive);
+            });
+        });
+    </script>
+
+</body>
+
+</html>
