@@ -11,24 +11,19 @@
         content="Architech, digitization, custom app solutions, Kenya startup, business information management">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@700&display=swap"
         rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-        integrity="sha512-bb3asYyT5H7rKgh5tq8T/7dyR4WB7gFV8Bo+IjCZ8mGWCHnQ06W4FVZulI1dA2yE/B5HHBO2n2k9PG89TtwEhQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 
 <body>
     <!-- Header -->
-    <header>
+    <header id="myHeader">
         <div class="container">
             <div class="logo">
                 <h1>Architech</h1>
             </div>
             <nav>
-                <button class="toggle-menu" aria-expanded="false" aria-controls="menu">Menu</button>
+                <button class="toggle-menu" aria-expanded="false" aria-controls="menu" id="smallMenu">Menu</button>
                 <ul class="menu" id="menu">
                     <li><a href="#hero">Home</a></li>
                     <li><a href="#about-us">About Us</a></li>
@@ -36,7 +31,7 @@
                     <li><a href="#">Portfolio</a></li>
                     <li><a href="#">Blog</a></li>
                     <li><a href="#">Contact</a></li>
-                    <li><a href="#" class="cta">Get a Quote</a></li>
+                    <li><a href="#" class="cta"><b> Get a Quote</b></a></li>
                 </ul>
             </nav>
         </div>
@@ -88,7 +83,8 @@
                     <i class="fas fa-file-alt"></i>
                     <div class="service-content">
                         <h3>Digitization</h3>
-                        <p>Transforming paper files into digital records efficiently and securely.Manage your data efficiently with databases and much more</p>
+                        <p>Transforming paper files into digital records efficiently and securely.Manage your data
+                            efficiently with databases and much more</p>
                     </div>
                 </div>
                 <div class="service-card">
@@ -139,6 +135,42 @@
                 menu.setAttribute('aria-hidden', !isActive);
             });
         });
+
+        window.onscroll = function () {
+            myFunction();
+        };
+
+        const header = document.getElementById("myHeader");
+        const smallMenu = document.getElementById("smallMenu");
+        const menuItems = document.querySelectorAll('.menu li a');
+        const architechText = document.querySelector('.logo h1');
+
+        var blurer = document.getElementById("hero").offsetTop;
+        var colorize = (document.getElementById("about-us").offsetTop);
+        var toColor = '#004f4f';
+        var fromColor = '#fff';
+
+
+        function myFunction() {
+            if (window.pageYOffset > colorize) {
+                header.classList.add("headerBlur");
+                menuItems.forEach((menuItem) => {
+                    menuItem.style.color = toColor;
+                });
+                architechText.style.color = toColor;
+                smallMenu.style.color = toColor;
+            } else {
+                menuItems.forEach((menuItem) => {
+                    menuItem.style.color = fromColor;
+                });
+                architechText.style.color = fromColor;
+                smallMenu.style.color = fromColor;
+
+                header.classList.remove("headerBlur");
+            }
+
+        }
+
     </script>
 
 </body>

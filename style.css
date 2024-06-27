@@ -44,10 +44,29 @@ header {
     background-color: #004f4f;
     color: #fff;
     padding: 20px 0;
-    position: fixed;
     top: 0;
-    left: 0;
-    width: 100%;
+    position: sticky;
+}
+
+@keyframes fadeOut {
+    0% {
+        background-color: #004f4f;
+    }
+
+    100% {
+        background: transparent;
+        backdrop-filter: blur(20px);
+    }
+}
+
+.headerBlur {
+    animation: fadeOut 0.5s ease-in-out;
+    background: transparent;
+    backdrop-filter: blur(20px);
+}
+
+.headerText {
+    color: #004f4f;
 }
 
 header .container {
@@ -136,17 +155,10 @@ header .menu li a.cta {
 
     header .menu {
         display: none;
-        /* Hide menu by default */
         flex-direction: column;
-        /* Stack navigation vertically */
         text-align: center;
-        background-color: #004f4f;
-        /* Background color for menu */
-        /* position: absolute; */
         top: 100%;
-        /* Position below the header */
         width: 100%;
-        /* Full width */
         left: 0;
     }
 
@@ -241,7 +253,7 @@ header .menu li a.cta {
 .services {
     padding: 60px 0;
     /* background-color: #f4f4f4a3; */
-    background-color:#e7e7e7cc;
+    background-color: #e7e7e7cc;
     text-align: center;
     background-image: url("text.png");
     background-size: 10%;
