@@ -1,4 +1,9 @@
 /* Global Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+
 body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
@@ -11,9 +16,10 @@ body {
     max-width: 1200px;
     margin: 0 auto;
 }
-.hero .blur{
-    background-color:rgba(0, 47, 47, 0.815);
-} 
+
+.hero .blur {
+    background-color: rgba(0, 47, 47, 0.815);
+}
 
 h1,
 h2,
@@ -34,9 +40,13 @@ ul {
 
 /* Header */
 header {
-    background-color:  #004f4f;
+    background-color: #004f4f;
     color: #fff;
     padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 header .container {
@@ -51,12 +61,15 @@ header .logo h1 {
 }
 
 header nav {
-    flex: 1; /* Take remaining space */
-    text-align: center; /* Center align items on smaller screens */
+    flex: 1;
+    /* Take remaining space */
+    text-align: center;
+    /* Center align items on smaller screens */
 }
 
 header .toggle-menu {
-    display: none; /* Hide toggle button by default */
+    display: none;
+    /* Hide toggle button by default */
 }
 
 header .menu {
@@ -64,7 +77,8 @@ header .menu {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center; /* Center align items on smaller screens */
+    justify-content: center;
+    /* Center align items on smaller screens */
     align-items: center;
 }
 
@@ -87,24 +101,30 @@ header .menu li a.cta {
 /* Responsive adjustments */
 @media (max-width: 960px) {
     header {
-        padding: 10px 0; /* Reduce padding */
+        padding: 10px 0;
+        /* Reduce padding */
     }
 
     header .container {
-        flex-direction: column; /* Stack items vertically */
+        flex-direction: column;
+        /* Stack items vertically */
     }
 
     header .logo {
-        text-align: center; /* Center align logo */
-        margin-bottom: 10px; /* Add spacing */
+        text-align: center;
+        /* Center align logo */
+        margin-bottom: 10px;
+        /* Add spacing */
     }
 
     header nav {
-        order: -1; /* Move navigation above logo on smaller screens */
+        order: -1;
+        /* Move navigation above logo on smaller screens */
     }
 
     header .toggle-menu {
-        display: block; /* Display toggle button */
+        display: block;
+        /* Display toggle button */
         background: none;
         border: none;
         color: #fff;
@@ -114,22 +134,29 @@ header .menu li a.cta {
     }
 
     header .menu {
-        display: none; /* Hide menu by default */
-        flex-direction: column; /* Stack navigation vertically */
+        display: none;
+        /* Hide menu by default */
+        flex-direction: column;
+        /* Stack navigation vertically */
         text-align: center;
-        background-color: #004f4f; /* Background color for menu */
+        background-color: #004f4f;
+        /* Background color for menu */
         /* position: absolute; */
-        top: 100%; /* Position below the header */
-        width: 100%; /* Full width */
+        top: 100%;
+        /* Position below the header */
+        width: 100%;
+        /* Full width */
         left: 0;
     }
 
     header .menu.active {
-        display: flex; /* Show menu when active */
+        display: flex;
+        /* Show menu when active */
     }
 
     header .menu li {
-        margin: 10px 0; /* Adjust margin */
+        margin: 10px 0;
+        /* Adjust margin */
     }
 }
 
