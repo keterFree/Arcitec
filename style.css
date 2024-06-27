@@ -9,6 +9,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #f4f4f4;
 }
 
 .container {
@@ -239,8 +240,12 @@ header .menu li a.cta {
 /* Services Section */
 .services {
     padding: 60px 0;
-    background-color: #f4f4f4;
+    /* background-color: #f4f4f4a3; */
+    background-color:#e7e7e7cc;
     text-align: center;
+    background-image: url("text.png");
+    background-size: 10%;
+    border-radius: 20px;
 }
 
 .services h2 {
